@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MshanaELitwaza | IT Professional</title>
+  <meta name="description" content="Professional portfolio of Mshana ELitwaza, an IT Professional specializing in systems, networking, cybersecurity, and automation." />
+  <meta property="og:title" content="Mshana ELitwaza | IT Professional" />
+  <meta property="og:description" content="IT Professional / Technician with a passion for reliable, secure, and scalable infrastructure." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2'><path d='M12 2L2 7l10 5 10-5-10-5z'/><path d='M2 17l10 5 10-5'/><path d='M2 12l10 5 10-5'/></svg>" />
+  <link rel="stylesheet" href="css/mainstyles.css" />
+
+  <!-- Prevent flash of wrong theme (runs before CSS paints) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo" aria-label="Mshana ELitwaza — Home">
+  <img src="img/meeee.jpg" alt="Mshana ELitwaza logo" width="160" height="40" />
+</a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" class="btn btn-resume">Resume</a></li>
+        <li><a href="resources.html" class="btn btn-resume" target="_blank">Resources</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">
+          <!-- Moon = switch to dark -->
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <!-- Sun = switch to light -->
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+        </button>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="status-dot"></span> Available for opportunities
+        </div>
+        <h1>Hi, I'm <span class="highlight">ELi Mshana</span></h1>
+        <h2>IT Professional / Technician | Tech Support | Technology Enthusiast</h2>
+        <p class="hero-description">
+          I design, plan, and maintain reliable IT infrastructure that keeps businesses running smoothly.
+          Passionate about security, automation, and modern solutions.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Let's Connect</a>
+        </div>
+        <div class="social-links">
+          <!-- <a href="https://github.com/adamsmshana" target="_blank" rel="noopener" aria-label="GitHub">🐙</a> -->
+          <a href="https://wa.me" target="_blank"><img src="img/whatsapp.png" alt="whatspp" width="150" height="100"></a>
+          <!-- <a href="tel:+255657932146" target="_blank" rel="noopener" aria-label="Phone">buzz</a> -->
+          <a href="mailto:mshanaelitwaza@gmail.com" aria-label="Email"><img src="img/email.png" width="120" height="80"></a>
+        </div>
+      </div>
+      <div class="hero-terminal">
+        <div class="terminal-header">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">bash — 80×24</span>
+        </div>
+        <pre class="terminal-body" id="terminal-output"></pre>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">About Me</span>
+        <h2>Passionate about building reliable technology</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm an IT professional with over 5 years of experience in system administration, networking, and cybersecurity. I thrive on solving complex technical challenges and building infrastructure that is secure, scalable, and maintainable.</p>
+          <p>My approach combines a deep understanding of core IT principles with a passion for automation and modern tooling. I believe in continuous learning and staying at the forefront of technology to deliver the best solutions.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item"><span class="stat-number" data-target="5">0</span>+ Years Experience</div>
+          <div class="stat-item"><span class="stat-number" data-target="10">0</span>+ Projects Completed</div>
+          <div class="stat-item"><span class="stat-number" data-target="7">0</span>+ Technologies</div>
+          <div class="stat-item"><span class="stat-number" data-target="5">0</span>+ Certifications</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Technical Skills</span>
+        <h2>What I work with</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>🖥️ IT &amp; Infrastructure</h3>
+          <ul>
+            <li>System Administration</li>
+            <li>Linux (Ubuntu, CentOS)</li>
+            <li>IT Support</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>🌐 Networking</h3>
+          <ul>
+            <li>TCP/IP</li>
+            <li>DNS</li>
+            <li>Routing &amp; Switching</li>
+            <li>Firewalls (pfSense, Cisco ASA)</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>🔒 CyberSecurity &amp; Ethical Hacking</h3>
+          <ul>
+            <li>Threat identification</li>
+            <li>OS hardening</li>
+            <li>Wireshark</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>💻 Programming &amp; Web</h3>
+          <ul>
+            <li>Python</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>HTML/CSS</li>
+            <li>JS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Projects</span>
+        <h2>Featured Work &amp; Case Studies</h2>
+      </div>
+      <div class="projects-grid" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Career</span>
+        <h2>Professional Experience</h2>
+      </div>
+      <div class="timeline" id="experience-timeline"></div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Gallery</span>
+        <h2>Places I've Worked &amp; People I've Trained</h2>
+      </div>
+      <div class="filter-buttons" id="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="places">Places</button>
+        <button class="filter-btn" data-filter="people">People</button>
+        <button class="filter-btn" data-filter="training">Training</button>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="section section-alt">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Credentials</span>
+        <h2>Certifications &amp; Education</h2>
+      </div>
+      <div class="cert-grid" id="certifications-grid"></div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Services</span>
+        <h2>What I Can Do For You</h2>
+      </div>
+      <div class="services-grid" id="services-grid"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">Contact</span>
+        <h2>Let's Build Something Great</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get in touch</h3>
+          <a href="mailto:mshanaelitwaza@gmail.com" aria-label="Email"><strong>Email</strong>mshanaelitwaza@gmail.com</a> <br>
+          <!-- <p><strong>Email:</strong> alex.mshanaelitwaza@gmail.com</p> -->
+          <a href="tel:+255657932146" target="_blank" rel="noopener" aria-label="Phone"><strong>Phone:</strong> +255 657 392 146</a>
+          <!-- <p><strong>Phone:</strong> +255 (0) 657 392 146</p> -->
+          <p><strong>Location:</strong> Zanzibar, Tanzania</p>
+          <div class="social-links">
+            <a href="https://github.com/adamsmshana" target="_blank" rel="noopener" aria-label="GitHub">🐙</a>
+            <a href="https://linkedin.com/in/alexcarter" target="_blank" rel="noopener" aria-label="LinkedIn">💼</a>
+            <a href="mailto:alex.mshanaelitwaza@gmail.com" aria-label="Email">✉️</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>© 2026 Mshana ELitwaza. All rights reserved.</p>
+      <p>Built with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <span class="close-modal" id="close-modal" role="button" aria-label="Close">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox -->
+  <div id="gallery-lightbox" class="modal" role="dialog" aria-modal="true">
+    <div class="lightbox-content">
+      <span class="close-modal" id="close-lightbox" role="button" aria-label="Close">&times;</span>
+      <img id="lightbox-img" src="" alt="" />
+      <div class="lightbox-caption">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/mainscript.js"></script>
+</body>
+</html>
